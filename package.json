@@ -1,0 +1,31 @@
+{
+  "name": "RyouCSS",
+  "version": "1.0.0",
+  "description": "CSS framework for lsh",
+  "main": "index.js",
+  "scripts": {
+    "test": "no"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://solacat@github.com/solacat/RyouCSS.git"
+  },
+  "keywords": [
+    "css"
+  ],
+  "author": "Ryousola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/solacat/RyouCSS/issues"
+  },
+  "homepage": "https://github.com/solacat/RyouCSS",
+  "devDependencies": {
+    "cssgrace": "^2.0.2",
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-less": "^3.0.2",
+    "gulp-postcss": "^4.0.3",
+    "gulp-rename": "^1.2.0",
+    "postcss": "^4.0.6"
+  }
+}

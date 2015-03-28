@@ -1,0 +1,53 @@
+/* LESS常用样式组件引入区 */
+@import 'reset';
+/* LESS常用样式组件引入区 */
+
+/* LESS变量定义区 */
+@height : 150px;
+@bg-r-color : #4eb3b9;
+@bg-l-color : #ff0097;
+/* LESS变量定义区 */
+
+/* 全局标签属性重写区 */
+body,html{
+    width: 100%;
+    height: 100%;
+}
+p{
+  height: @height;
+  padding: 10px;
+  color: #fff;
+  background-color: @bg-r-color;
+}
+/* 全局标签属性重写区 */
+
+/* 布局样式区 */
+.g-bd1{
+    clear:fix;
+    margin: 0 0 10px;
+    p{
+        background-color: @bg-l-color;
+    }
+}
+
+.g-sd1{
+    position: relative;
+    background-color: @bg-r-color;
+    float: left;
+    width: 190px;
+    margin-right: -190px;
+    p{
+        height: 150px;
+    }
+}
+
+.g-mn1{
+    float: right;
+    width: 100%;
+    background-color: @bg-l-color;
+}
+
+.g-mn1c{
+    margin-left: 200px;
+}
+/* 布局样式区 */
