@@ -1,0 +1,48 @@
+/* LESS常用样式组件引入区 */
+@import 'reset';
+@import 'layout';
+/* LESS常用样式组件引入区 */
+
+/* LESS变量定义区 */
+@height: 150px;
+@bg-r-color: #4eb3b9;
+@bg-l-color: #ff0097;
+@bg-m-color: #de9317;
+@bg-r1-color: #034888;
+@bg-l1-color: #1ba1e2;
+
+/* LESS变量定义区 */
+
+/* 全局标签属性重写区 */
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    margin: 0 8px;
+}
+/* 全局标签属性重写区 */
+
+/* 布局样式区 */
+
+//两列左侧自适应
+.l2-sm(@height,@bg-r-color,@bg-l-color);
+
+//两列右侧自适应
+.l2-ms(@height,@bg-r-color,@bg-l-color);
+
+//两列定宽
+.l2-mm(@height,@bg-r-color,@bg-l-color);
+
+//三列中间自适应
+.l3-sms(@height,@bg-r1-color,@bg-l1-color);
+
+//三列左侧自适应
+.l3-mss(@height,@bg-r1-color,@bg-l1-color);
+
+//三列右侧自适应
+.l3-ssm(@height,@bg-r1-color,@bg-l1-color);
+/* 布局样式区 */
+
