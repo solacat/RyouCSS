@@ -3,13 +3,15 @@ var gulp     = require('gulp'),
     postcss  = require('gulp-postcss'),
     less     = require('gulp-less'),
     cssgrace = require('cssgrace'),
-    del      = require('del')
+    del      = require('del'),
+    autoprefixer = require('autoprefixer-core')
+
 
 gulp.task('default',['clean'], function () {
     var processors = [
         require('cssgrace')
     ];
-    gulp.src('src/less/layout.less')
+    gulp.src('src/less/index.less')
         .pipe(less({
             compress: true
         }))
@@ -20,3 +22,5 @@ gulp.task('default',['clean'], function () {
 gulp.task('clean', function(cb) {
     del(['build/css', 'build/js'], cb)
 });
+
+gulp.watch('src/less/index.less', ['default']);
