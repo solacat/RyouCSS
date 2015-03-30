@@ -10,7 +10,6 @@
 @bg-m-color: #de9317;
 @bg-r1-color: #034888;
 @bg-l1-color: #1ba1e2;
-
 /* LESS变量定义区 */
 
 /* 全局标签属性重写区 */
@@ -21,7 +20,7 @@ html {
 }
 
 h1{
-    margin: 0 8px;
+    margin: 8px;
 }
 /* 全局标签属性重写区 */
 
@@ -30,19 +29,37 @@ h1{
 //两列左侧自适应
 .l2-sm(@height,@bg-r-color,@bg-l-color);
 
+//两列左侧自适应(FlexBox)
+.l2-sm-f(@height,@bg-r-color,@bg-l-color);
+
 //两列右侧自适应
 .l2-ms(@height,@bg-r-color,@bg-l-color);
+
+//两列右侧自适应(FlexBox)
+.l2-ms-f(@height,@bg-r-color,@bg-l-color);
 
 //两列定宽
 .l2-mm(@height,@bg-r-color,@bg-l-color);
 
+//两列定宽
+.l2-mm-f(@height,@bg-r-color,@bg-l-color);
+
 //三列中间自适应
 .l3-sms(@height,@bg-r1-color,@bg-l1-color);
+
+//三列中间自适应(FlexBox)
+.l3-sms-f(@height,@bg-r1-color,@bg-l1-color);
 
 //三列左侧自适应
 .l3-mss(@height,@bg-r1-color,@bg-l1-color);
 
+//三列左侧自适应(FlexBox)
+.l3-mss-f(@height,@bg-r1-color,@bg-l1-color);
+
 //三列右侧自适应
 .l3-ssm(@height,@bg-r1-color,@bg-l1-color);
+
+//三列右侧自适应(FlexBox)
+.l3-ssm-f(@height,@bg-r1-color,@bg-l1-color);
 /* 布局样式区 */
 

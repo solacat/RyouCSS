@@ -23,4 +23,4 @@ gulp.task('clean', function(cb) {
     del(['build/css', 'build/js'], cb)
 });
 
-gulp.watch('src/less/index.less', ['default']);
+gulp.watch('src/less/*.less', ['default']);

@@ -1,5 +1,5 @@
 /*
-**Title :基础样式布局模型
+**Title :基础样式布局模型兼容版&flexbox版
 **Author:RyouSola
 */
 
@@ -10,6 +10,10 @@ p {
     color: #fff;
     background-color: @bg-r-color;
 }
+
+/**
+**兼容版
+*/
 
 //两列右侧自适应布局
 .l2-sm(@height,
@@ -69,8 +73,8 @@ p {
 
 //两列定宽
 .l2-mm(@height,
-@bg-l-color,
-@bg-r-color) {
+@bg-r-color,
+@bg-l-color) {
     .g-bd3 {
         clear: fix;
         width: 950px;
@@ -80,21 +84,21 @@ p {
     .g-sd3 {
         float: right;
         width: 230px;
+        p {
+            height: @height;
+            background-color: @bg-l-color;
+        }
     }
     .g-mn3 {
         float: left;
         width: 710px;
-        p {
-            height: @height;
-            background-color: @bg-r-color;
-        }
     }
 }
 
 //三列中间自适应布局
 .l3-sms(@height,
-@bg-l-color,
-@bg-r-color) {
+@bg-r-color,
+@bg-l-color) {
     .g-bd4 {
         clear: fix;
         margin: 0 auto;
@@ -127,8 +131,8 @@ p {
 
 //三列左侧自适应布局
 .l3-mss(@height,
-@bg-l-color,
-@bg-r-color) {
+@bg-r-color,
+@bg-l-color) {
     .g-bd5 {
         clear: fix;
         margin: 0 auto;
@@ -160,8 +164,8 @@ p {
 
 //三列右侧自适应布局
 .l3-ssm(@height,
-@bg-l-color,
-@bg-r-color) {
+@bg-r-color,
+@bg-l-color) {
     .g-bd6 {
         clear: fix;
         margin: 0 auto;
@@ -188,5 +192,199 @@ p {
     }
     .g-mn6c {
         margin-left: 440px;
+    }
+}
+
+/**
+**Flexbox版
+*/
+
+//两列右侧自适应布局
+.l2-sm-f(@height,
+@bg-r-color,
+@bg-l-color){
+    .g-bd1-f{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        margin: 0 0 10px;
+        padding: 10px;
+    }
+
+    .g-sd1-f{
+        flex:none;
+        position: relative;
+        width: 190px;
+        p{
+            height: @height;
+            background-color: @bg-l-color;
+        }
+    }
+    .g-mn1-f{
+        width: 100%;
+        margin-left: 10px;
+    }
+}
+
+//两列左侧自适应布局
+.l2-ms-f(@height,
+@bg-r-color,
+@bg-l-color){
+    .g-bd2-f{
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        margin: 0 0 10px;
+        padding: 10px;
+    }
+
+    .g-sd2-f{
+        flex:none;
+        position: relative;
+        width: 190px;
+        p{
+            height: @height;
+            background-color: @bg-l-color;
+        }
+    }
+    .g-mn2-f{
+        width: 100%;
+        margin-right: 10px;
+    }
+}
+
+//两列定宽布局
+.l2-mm-f(@height,
+@bg-r-color,
+@bg-l-color){
+    .g-bd3-f{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        margin: 0 auto;
+        padding: 10px;
+        width: 950px;
+    }
+
+    .g-sd3-f{
+        flex:none;
+        position: relative;
+        width: 230px;
+        margin-left: 10px;
+        p{
+            height: @height;
+            background-color: @bg-l-color;
+        }
+    }
+    .g-mn3-f{
+        flex: none;
+        width: 710px;
+    }
+}
+
+//三列中间自适应布局
+.l3-sms-f(@height,
+@bg-r-color,
+@bg-l-color){
+    .g-bd4-f{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        margin: 0 0 10px;
+        padding: 10px;
+    }
+
+    .g-sd41-f,
+    .g-sd42-f{
+        flex:none;
+        position: relative;
+        width: 230px;
+        p{
+            height: @height;
+            background-color: @bg-r-color;
+        }
+    }
+
+    .g-sd42-f{
+        width: 190px;
+    }
+
+    .g-mn4-f{
+        width: 100%;
+        margin: 0 10px;
+    }
+}
+
+//三列左侧自适应布局
+.l3-mss-f(@height,
+@bg-r-color,
+@bg-l-color){
+    .g-bd5-f{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        margin: 0 0 10px;
+        padding: 10px;
+    }
+
+    .g-sd51-f,
+    .g-sd52-f{
+        flex:none;
+        position: relative;
+        width: 230px;
+        p{
+            height: @height;
+            background-color: @bg-r-color;
+        }
+    }
+
+    .g-sd51-f{
+        width: 190px;
+        margin-right: 10px;
+    }
+
+    .g-mn5-f{
+        width: 100%;
+        margin-right: 10px;
+    }
+}
+
+//三列右侧自适应布局
+.l3-ssm-f(@height,
+@bg-r-color,
+@bg-l-color){
+    .g-bd6-f{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        margin: 0 0 10px;
+        padding: 10px;
+    }
+
+    .g-sd61-f,
+    .g-sd62-f{
+        flex:none;
+        position: relative;
+        width: 230px;
+        p{
+            height: @height;
+            background-color: @bg-r-color;
+        }
+    }
+
+    .g-sd61-f{
+        width: 190px;
+        margin-right: 10px;
+    }
+
+    .g-mn6-f{
+        width: 100%;
+        margin-left: 10px;
     }
 }
