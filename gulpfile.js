@@ -11,7 +11,7 @@ gulp.task('default',['clean'], function () {
     var processors = [
         require('cssgrace')
     ];
-    gulp.src('src/less/index.less')
+    gulp.src('src/less/units.less')
         .pipe(less({
             compress: true
         }))
@@ -23,4 +23,4 @@ gulp.task('clean', function(cb) {
     del(['build/css', 'build/js'], cb)
 });
 
-gulp.watch('src/less/*.less', ['default']);
+gulp.watch('src/less/*.less', ['default']); 
