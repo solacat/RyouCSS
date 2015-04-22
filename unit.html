@@ -1,25 +1,64 @@
 <!DOCTYPE html>
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>unit实例</title>
 	<link rel="stylesheet" href="build/css/units.css">
 </head>
 <body>
-	<div>
+	<div class="m-btns">
 		<h6>nec风格</h6>
 		<button type="button" class="u-btn">蓝色</button>
-		<button type="button" class="u-btn">红色</button>
-		<button type="button" class="u-btn">黄色</button>
-		<button type="button" class="u-btn">绿色</button>
-		<button type="button" class="u-btn">灰色</button>
+		<button type="button" class="u-btn z-c1">红色</button>
+		<button type="button" class="u-btn z-c2">黄色</button>
+		<button type="button" class="u-btn z-c3">绿色</button>
+		<button type="button" class="u-btn z-c4">灰色</button>
+		<button type="button" class="u-btn"><span class="btntxt">下拉</span><span class="btnsel"></span></button>
 	</div>
-	<div>
+	<div class="m-btns">
 		<h6>google风格</h6>
 		<button type="button" class="u-btn-g">蓝色</button>
-		<button type="button" class="u-btn-g">红色</button>
-		<button type="button" class="u-btn-g">黄色</button>
-		<button type="button" class="u-btn-g">绿色</button>
-		<button type="button" class="u-btn-g">灰色</button>
+		<button type="button" class="u-btn-g z-c1-g">红色</button>
+		<button type="button" class="u-btn-g z-c2-g">黄色</button>
+		<button type="button" class="u-btn-g z-c3-g">绿色</button>
+		<button type="button" class="u-btn-g z-c4-g">灰色</button>
+		<button type="button" class="u-btn-g"><span class="btntxt">下拉</span><span class="btnsel"></span></button>
+	</div>
+	<div class="m-menu">
+		<h6>nec风格</h6>
+		<ul class="u-menu u-menu-show">
+			<li><a href="#">下拉菜单</a></li>
+			<li><a href="#">下拉菜单项</a></li>
+			<li><a href="#">下拉菜单项</a></li>
+			<li><a href="#">下拉菜单项</a></li>
+			<li><a href="#">下拉菜单项</a></li>
+		</ul>
+		<div class="u-btns">
+			<button class="u-btn z-c4">灰色</button>
+			<button class="u-btn z-c4">灰色</button>
+			<button class="u-btn z-c4">灰色</button>
+			<button class="u-btn z-c4">灰色</button>
+			<button class="u-btn z-c4">灰色</button>
+		</div>
+		<div class="u-btns">
+			<button class="u-btn z-c4">灰色</button>
+			<button class="u-btn z-c4"><span class="btnsel"></span></button>
+			<ul class="u-menu u-menu-show">
+				<li><a href="#">下拉菜单</a></li>
+				<li><a href="#">下拉菜单</a></li>
+				<li><a href="#">下拉菜单</a></li>
+				<li><a href="#">下拉菜单</a></li>
+				<li><a href="#">下拉菜单</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="m-ipts">
+		<h6>nec风格</h6>
+		<input type="text" class="u-ipt"/>
+		<div class="u-iptc">
+			<input type="text" name="this" class="u-ipt"/>
+			<label for="this">点击（焦点）就会消失的文字</label>
+		</div>
+		<input type="text" class="u-ipt z-erro">
 	</div>
 </body>
 </html>

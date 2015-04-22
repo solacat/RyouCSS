@@ -1,20 +1,101 @@
 @import 'reset';
 @import 'unit';
 
+body,html{
+	background-color: #e5e5e5;
+}
 div{
-	padding: 10px;
 	margin: 0 18px;
+	position: relative;
 }
 h6{
 	line-height: 38px;
 }
 
-@bt-color-1:#54aede;
-@bt-color-2:#de2027;
-@bt-color-3:#faa42b;
-@bt-color-4:#5cbc5c;
-@bt-color-5:#f3f3f3;
+//演示用例优化
+.m-btns{
+	.u-btn{
+		margin: 18px;
+	}
+	.u-btn-g{
+		margin: 18px;	
+	}
+}
+
+.m-menu{
+	ul{
+		display: inline-block;
+		position: relative;
+	}
+}
+
+//全局颜色定
+@bt-color-1:#de2027;
+@bt-color-2:#faa42b;
+@bt-color-3:#5cbc5c;
+@bt-color-4:#f3f3f3;
 
 
-.u-btn(@bt-color-1);
-.u-btn-g(@bt-color-1);
+/*组件基础CSS导入，由于类名都相同，这里不建议使用导入变量的形式
+**需要自定义的部分建议CSS类型重写
+*/
+.u-btn();
+.u-btn-g();
+.u-btns();
+.u-menu();
+.u-ipt();
+
+//重写部分实例：
+.z-c1{
+	border-color:#9f161b;
+	background:-webkit-gradient(linear,0% 0%,0% 100%,from(#ee232a),to(#cc1c23));
+	background:linear-gradient(#ee232a,#cc1c23);
+	&:hover{
+		background:#cc1c23;
+	}
+}
+.z-c2{
+	border-color:#e1962d;
+	background:#faa42b;
+	background:-webkit-gradient(linear,0% 0%,0% 100%,from(#fbb149),to(#f8960a));
+	background:linear-gradient(#fbb149,#f8960a);
+	&:hover{
+		background:#f8960a;
+	}
+}
+.z-c3{
+	border-color:#52a552;
+	background:#5cbc5c;
+	background:-webkit-gradient(linear,0% 0%,0% 100%,from(#68c668),to(#50b150));
+	background:linear-gradient(#68c668,#50b150);
+	&:hover{
+		background:#50b150;
+	}
+}
+.z-c4{
+	border-color:#d0d0d0;t
+	ext-shadow:0 1px rgba(255,255,255,0.8);
+	background:#f3f3f3;
+	background:-webkit-gradient(linear,0% 0%,0% 100%,from(#fefefe),to(#e7e7e7));
+	background:linear-gradient(#fefefe,#e7e7e7);
+	color: #000;
+	&:hover{
+		background:#e7e7e7;
+	}
+	.btnsel{
+		border-top-color: rgba(0,0,0,0.6);
+	}	
+}
+.z-c1-g{
+	background-color: @bt-color-1;
+}
+.z-c2-g{
+	background-color: @bt-color-2;
+}
+.z-c3-g{
+	background-color: @bt-color-3;
+}
+.z-c4-g{
+	background-color: @bt-color-4;
+	color: #000;
+}
